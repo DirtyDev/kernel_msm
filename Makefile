@@ -1,7 +1,7 @@
 VERSION = 3
 PATCHLEVEL = 10
 SUBLEVEL = 73
-EXTRAVERSION = -DirtyDevs-0.2.6
+EXTRAVERSION = -DirtyDevs-0.2.7
 NAME = TOSSUG Baby Fish
 
 # *DOCUMENTATION*
@@ -241,8 +241,8 @@ CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
 
 HOSTCC       = gcc
 HOSTCXX      = g++
-HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O3 -fomit-frame-pointer -fgcse-las
-HOSTCXXFLAGS = -O3 -fgcse-las
+HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer
+HOSTCXXFLAGS = -O2
 
 # Decide whether to build built-in, modular, or both.
 # Normally, just do built-in.
@@ -379,8 +379,7 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53 -march=armv8-a \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
-		   -march=armv8-a \
-		   -funsafe-math-optimizations
+		   -O3
 
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
